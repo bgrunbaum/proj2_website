@@ -1,0 +1,167 @@
+:root {
+  --color-accent: oklch(65% 50% 0);
+  accent-color: var(--color-accent);
+  color-scheme: light dark;
+  
+}
+
+body {
+  font: 100%/1.5 system-ui;
+  max-width: 600px;
+  margin-inline: auto;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  margin-bottom: 1em;
+  border-bottom: 1px solid oklch(80% 3% 200);
+  --border-color: oklch(50% 10% 200 / 40%);
+  
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid var(--border-color);
+  padding-bottom: 0.1em;
+
+  
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.1em;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5em;
+}
+
+label {
+  margin-top: 0.5em;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+textarea {
+  min-height: 8em;
+}
+
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+}
+
+
+
+button {
+  grid-column: 1 / -1;
+}
+
+img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  gap: 1em;
+  margin: 0;
+}
+
+.projects h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 250%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* Sections (CV) */
+section {
+  margin-block: 2.5em;
+}
+
+section h2 {
+  font-size: 1.7em;
+  border-bottom: 2px solid oklch(80% 3% 200);
+  padding-bottom: 0.4em;
+  margin-bottom: 1em;
+}
+
+section h3 {
+  font-size: 1.1em;
+  line-height: 1.4;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+section p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  line-height: 1.7;
+}
+
+section a {
+  color: inherit;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+section a:hover {
+  color: var(--color-accent);
+}
+
+time {
+  color: oklch(50% 0.02 240);
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+figure img {
+  display: block;  
+  max-width: 100%;      
+  height: auto;         
+  margin-inline: auto;
+}
